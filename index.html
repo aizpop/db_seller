@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Log In</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css” />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      font-family: 'Poppins','san-serif';
+    }
+    .wrapper{
+      padding: 0 20px 0 20px;
+      background-image: url(registerb.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height:  100vh;
+
+    
+    }
+    .row{
+      width: 90%;
+      height: 575px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+      margin:auto;
+    }
+    .side-image{
+      background-image: url(register.png);
+      background-position: center;
+      position: relative;
+      border-radius: 10px 0 0 10px;
+    }
+    img{
+      width: 20px;
+      position: absolute;
+      top:30px;
+      left: 30px;
+
+    }
+    .text{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .text p{
+      color:#fff;
+      font-size: 18px;
+    }
+    .right{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+  
+    .input-box{
+      width: 360px;
+      box-sizing: border-box;
+      
+    }
+    .input-box header{
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .input-field{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 0 10px 0 10px;
+    }
+    .input{
+      height: 30px;
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      outline: none;
+      margin-bottom: 25px;
+      color: #40414a;
+    }
+    @media only screen and (max-width: 768px){
+      .side-image{
+        border-radius: 10px 10px 0 0;
+        height: 100px;
+      }
+      img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+      }
+      .text{
+        position: absolute;
+        top:70%;
+        text-align: center;
+      }
+      .text p{
+        font-size: 17px;
+      }
+      .row{
+        max-width: 500px;
+        height: auto;
+        width: 100%;;
+      }
+    }
+    .btn{
+      margin: auto; 
+    margin-top: 20px;
+    background: #FFA500;
+    padding: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    width: 45%;
+     border-radius: 8px;
+     border:none;
+    }
+    .form-group .fa-eye{
+      position: absolute;
+      top: 53%;
+      right: 6%;
+      cursor: pointer;
+      color: black;
+  }
+  .text-left{
+    margin-left: 2%;
+
+  }
+
+  </style>
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-6 side-image">
+          <!----Image--->
+          <div class="text">
+            <p>Join Us</p>
+          </div>
+        </div>
+        <div class="col-md-6 right">
+          <div class="input-box">
+          <header><h3>Login</h3></header>
+        <div class="form-group">
+          <input type="text" class="input form-control" id="uname" required autocomplete="off" placeholder="Username"> 
+        </div>
+        <div class="form-group">
+          <input type="password"  class="input form-control" required autocomplete="off" placeholder="Password" name="password" id="password" />
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+        <div class="text-left">
+            <h6>Forgot Password?</h6>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary"><a href="home.html" style="text-decoration: none; color: #FFF;">Login</a></button>
+        </div>
+        <h6 class="text-center mt-5">No Account?<a href="register.html"><b>Register here</b></a></h6>
+
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const togglePassword = document
+        .querySelector('#togglePassword');
+
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', () => {
+
+        // Toggle the type attribute using
+        // getAttribure() method
+        const type = password
+            .getAttribute('type') === 'password' ?
+            'text' : 'password';
+              
+        password.setAttribute('type', type);
+
+        // Toggle the eye and bi-eye icon
+        this.classList.toggle('bi-eye');
+    });
+</script>
+  
+    </body>
+    </html>
